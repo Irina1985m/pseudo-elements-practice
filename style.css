@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+.menu,
+.submenu{
+    padding: 0;
+list-style: none;
+
+}
+.menu{
+    text-align: center;
+}
+.menu li ul{
+    display: none;
+}
+.menu li:hover>ul{
+    display: block;
+}
+.submenu{
+    width: 150px;
+    position: absolute;
+    
+    z-index: 10;
+}
+.submenu .submenu{
+    background-color: aqua;
+    top: 0;
+    left: 100%;
+}
+.menu-item{
+    display: inline-block;
+    background-color:yellow ;
+    position: relative;
+    }
+.submenu-item{
+    background-color: pink;
+    position: relative;
+}
+
+.menu-link,
+.submenu-link{
+display: block;
+padding: 1em 1em;
+}
+.card{
+width: 50vmin;
+height: 50vmin;
+padding-left: 10px;
+margin: 5vmin auto 0;
+
+border:1px solid #ccc ;
+ 
+background-color: beige;
+position: relative;
+}
+
+.card::before,.card::after{
+content: "";
+display: block;
+
+border: 1px solid #ccc;
+
+position:absolute;
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+
+}
+.card::before{
+    transform: rotate(3deg);
+    background-color: beige;
+    z-index: -2;
+    transform: -2deg;
+
+}
+.card:nth-child(3n+1)::before{
+    background-color: pink;
+}
+.card:nth-child(2n+2)::before{
+    background-color:red;
+}
+.card-title{
+
+}
+.card-content{}
