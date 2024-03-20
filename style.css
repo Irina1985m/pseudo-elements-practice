@@ -14,6 +14,9 @@ list-style: none;
 .menu{
     text-align: center;
 }
+.menu li:hover{
+    background-color: fuchsia;
+}
 .menu li ul{
     display: none;
 }
